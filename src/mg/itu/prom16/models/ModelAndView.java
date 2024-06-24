@@ -2,11 +2,11 @@ package mg.itu.prom16.models;
 
 import java.util.HashMap;
 
-public class ModelView {
+public class ModelAndView {
     private String url;
     private HashMap<String, Object> data;
 
-    public ModelView(String url) {
+    public ModelAndView(String url) {
         this.url = url;
         this.data = new HashMap<>();
     }
@@ -23,5 +23,3 @@ public class ModelView {
         return data;
     }
 }
-
-
