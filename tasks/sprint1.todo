@@ -1,0 +1,17 @@
+Sprint 1 :
+    GitHub :
+        ☐ Creation de la branche sprint 1 @1minute
+        ☐ fetch origin @1minute
+    
+    Annotation:
+        ☐ `Controller`: a ajouter aux classes a mettre en controllers
+    
+    web.xml :
+        ☐ Ajouter un init-param "controllers" dont la valuer est le package ou chercher les controllers
+
+    Frontcontroller :
+        Lister les controllers dans prossess request :
+            ☐ prendre le chemin ou se trouve le chemin ou puvoir trouver des packages
+            ☐ instancer chaque .class dans le package
+            ☐ voir si la classe a l'annotation de controller
+            ☐ l'ajouter dans la liste a afficher

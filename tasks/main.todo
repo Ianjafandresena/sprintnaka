@@ -1,0 +1,8 @@
+sprint 0 :
+    ✔ creation d'un servlet ave url "/" @done(24-05-07)
+    ✔ afficher l'url a partir du servlet @done(24-05-07)
+
+sprint 1 :
+    ☐ changer le nom de frontServlet en FrontController
+    ☐ trouver un moyen de creer des controlleurs sans les mettre dans le xml
+    ☐ afficher une lliste de ces controlleurs avec le FrontServlet
