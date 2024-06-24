@@ -1,0 +1,34 @@
+Sprint 0:
+    creation de depot avec main
+    cretion de branche sprint0-2393
+    clone
+    do the task
+    commit 
+    push 
+    merge request
+    accept
+    suppression de branche sprint0-2393
+    Repertoire de travail et script pour framework et test(WEB) => jar et deploiement
+    creation frontcontroller:
+        package mg.itu.prom16.FrontServlet(Controller) 
+        doget
+        dopost
+        processRequest() :recuperation url (out.println(url))
+        web.xml declaration FrontServlet
+
+Sprint 1:
+    objectif: pour quel que soit l'url en affiche les controlleurs(les noms des classes des controllers)
+    dev(test) nom du projet
+    AnnotaionController
+    annoter tout les controllers
+    xml declaration package
+    ajouter un boolean au frontcontroller pour verifier si le scan a deja ete effectuer
+
+Sprint 2:
+    creation d'annotion get avec attribut name
+    afficher le controller et la methode controller
+    Frontcontroller Hashmap<url,mapping(class, et methode (tous string))
+
+Sprint 4:
+    on affiche le string si la methode retourne un string
+    public ModelAndView 
