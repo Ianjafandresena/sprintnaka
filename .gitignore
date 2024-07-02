@@ -1,0 +1,7 @@
+temp-src/
+.vscode/
+lib/
+myservlet.jar
+*.class
+/bin
+script.bat

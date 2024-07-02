@@ -1,20 +1,23 @@
-@echo off
-
-REM Créer le répertoire de sortie temporaire
-mkdir "out"
-
-REM Copier tous les fichiers .java dans le répertoire de sortie temporaire
-for /r "src" %%f in (*.java) do copy "%%f" "out"
-
-REM Compiler toutes les classes en spécifiant le classpath
-javac -cp "lib\*" -d "out" "out\*.java"
-
-REM Créer le fichier JAR en spécifiant le point d'entrée et en incluant les fichiers compilés
-jar cfe "lib\front-controller.jar" mg.itu.prom16.controllers.FrontController -C out .
-
-REM Supprimer le répertoire de sortie temporaire
-if exist "out" (
-    rmdir /s /q "out"
+if errorlevel 1 (
+        pause
+        exit /b 1
 )
 
-pause
+set src_dir=C:/e-bossy/S4/Web Dyn/framework/framework/src
+set temp_src=C:/e-bossy/S4/Web Dyn/framework/framework/temp-src
+
+set bin_dir=C:/e-bossy/S4/Web Dyn/framework/framework/bin
+set lib_dir=C:/e-bossy/S4/Web Dyn/framework/framework/lib
+set work_dir=C:/e-bossy/S4/Web Dyn/framework/framework
+
+mkdir "%temp_src%"
+
+FOR /R "%src_dir%" %%F IN (*.java) DO (
+    copy "%%F" "%temp_src%"
+)
+
+cd "%temp_src%"
+javac -parameters -sourcepath "%temp_src%" -d "%bin_dir%" -cp "%lib_dir%" *.java
+
+jar -cvf "%work_dir%/myServlet.jar" -C "%bin_dir%" . 
+
