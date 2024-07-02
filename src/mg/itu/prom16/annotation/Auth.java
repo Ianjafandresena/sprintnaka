@@ -1,4 +1,4 @@
-package mg.itu.prom16.annotations;
+package mg.itu.prom16.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -6,6 +6,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.PARAMETER)
-public @interface ParamObject {
+@Target(ElementType.METHOD)
+public @interface Auth {
+    String profile() default ""; // Optional profile requirement
 }

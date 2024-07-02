@@ -1,4 +1,4 @@
-package mg.itu.prom16.annotations;
+package mg.itu.prom16.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -7,6 +7,6 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.PARAMETER)
-public @interface Param {
-    String value();
+public @interface ConfigData {
+    String key() default "";
 }
